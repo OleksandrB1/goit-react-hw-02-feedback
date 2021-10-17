@@ -19,10 +19,9 @@ class App extends Component {
     return Math.round((this.state.good / this.countTotalFeedback()) * 100);
   };
 
-  clickButton = (event) => {
-    const name = event.target.textContent;
+  clickButton = (item) => {
     this.setState((prevState) => ({
-      [name]: prevState[name] + 1,
+      [item]: prevState[item] + 1,
     }));
   };
 
